@@ -1,0 +1,19 @@
+.header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.header h1{
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+    font-size: 37px;
+    margin-left: 36px;
+}
+.header h1:hover{
+    color:#585468;
+    text-decoration: underline;
+}

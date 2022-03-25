@@ -1,0 +1,27 @@
+.shop-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin-bottom: 10px;
+}
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 20px;
+}
+.cart-container{
+    background-color: #c8beee;
+    border-radius: 8px;
+}
+.btn-cart{
+    background-color: #807a97;
+    border-radius:8px;
+    border: none;
+    margin-right: 5px;
+    color: white;
+}
+.btn-cart p{
+    margin-right: 5px;
+}
+.btn-cart:hover{
+    background-color: #635f75;
+}
