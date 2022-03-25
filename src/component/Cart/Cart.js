@@ -9,7 +9,7 @@ const Cart = (props) => {
     }
     return (
 
-        <div className='cart'>
+        <div>
             <h3>Who you are choosing ?</h3>
             <p>Waiting List: {cart.length}</p>
             <p>Total Salary: ${total}</p>

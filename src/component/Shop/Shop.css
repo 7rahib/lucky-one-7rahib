@@ -25,3 +25,8 @@
 .btn-cart:hover{
     background-color: #635f75;
 }
+.cart{
+    position: sticky;
+    top: 0;
+    padding: 30px 25px;
+}
