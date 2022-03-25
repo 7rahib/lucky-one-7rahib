@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Lucky One by Naimur Rashid Rahib
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live website link: [Live Site](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
