@@ -9,7 +9,7 @@
     margin-left: 20px;
 }
 .cart-container{
-    background-color: #c8beee;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 8px;
 }
 .btn-cart{
@@ -47,4 +47,17 @@
 }
 .cart button{
     margin: 5px;
+}
+
+@media only screen and (max-width:687px) {
+    .shop-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 10px;
+    }
+    .products-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 20px;
+    }
 }
