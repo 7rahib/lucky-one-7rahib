@@ -8,7 +8,8 @@ const Shop = () => {
 
     const [products, setProducts] = useState([])
     const [cart, setCart] = useState([]);
-    const [person, setPerson] = useState([]);
+    const [persons, setPerson] = useState([]);
+
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
@@ -18,8 +19,15 @@ const Shop = () => {
     const handleAddToCart = (product) => {
         const newCart = [...cart, product]
         setCart(newCart);
-        const name = product.name;
+        const name = [...persons, product];
         setPerson(name);
+    }
+    const handleChooseAgain = (persons) => {
+        setPerson([])
+    }
+    const handleChooseOne = (persons) => {
+        const lenght = persons.lenght
+        console.log(lenght)
     }
 
     return (
@@ -40,12 +48,25 @@ const Shop = () => {
                         <Cart cart={cart}></Cart>
                     </div>
                     <div>
-                        <Person person={person}></Person>
+                        {
+                            persons?.map(person => <Person
+                                key={person.id}
+                                person={person}
+                            ></Person>
+                            )
+                        }
+                        <div>
+                            <button onClick={handleChooseOne} className='btn-cart'>Choose 1 for me</button>
+                        </div>
+                        <div>
+                            <button onClick={handleChooseAgain} className='btn-cart'>Choose Again</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+
+            </div>
+        </div >
     );
 };
 

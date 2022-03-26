@@ -2,10 +2,10 @@ import React from 'react';
 import './Person.css'
 
 const Person = (props) => {
-    const { person } = props
+    const { name } = props.person;
     return (
         <div>
-            <h1>{person}</h1>
+            <h5>{name}</h5>
         </div>
     );
 };
