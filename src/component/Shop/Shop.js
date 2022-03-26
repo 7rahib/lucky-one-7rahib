@@ -24,12 +24,7 @@ const Shop = () => {
         const newCart = [...cart, product]
         setCart(newCart);
         const name = [...persons, product];
-        if (name.length <= 4) {
-            setPerson(name);
-        }
-        else {
-            alert("Can't choose more than 4")
-        }
+        setPerson(name);
         setLength(name.length)
         setCurrentItem([])
 
