@@ -3,3 +3,10 @@
     top: 0;
     padding: 30px 25px;
 }
+
+@media only screen and (max-width:687px) {
+    .cart{
+        position: sticky;
+        top: 0;
+    }
+}
