@@ -13,6 +13,7 @@ const Shop = () => {
     const [length, setLength] = useState([]);
     const [currentItem, setCurrentItem] = useState([]);
     const [currentRandom, setCurrentRandom] = useState([]);
+
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
@@ -30,11 +31,17 @@ const Shop = () => {
             alert("Can't choose more than 4")
         }
         setLength(name.length)
+        setCurrentItem([])
 
     }
     const handleChooseOne = () => {
 
+        if (cart == 0) {
+            alert('Please choose one first')
+            return
+        }
         const random = Math.floor(Math.random() * length);
+
 
         if (currentRandom !== random) {
             const item = persons[random];
@@ -44,7 +51,8 @@ const Shop = () => {
         else {
             handleChooseOne();
         }
-
+        setPerson([])
+        setCart([])
     }
     const handleChooseAgain = () => {
         setPerson([])
@@ -90,8 +98,6 @@ const Shop = () => {
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div >
     );
