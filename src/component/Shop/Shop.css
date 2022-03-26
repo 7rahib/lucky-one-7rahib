@@ -13,21 +13,38 @@
     border-radius: 8px;
 }
 .btn-cart{
-    background-color: #807a97;
+    background-color: #55a81e;
     border-radius:8px;
     border: none;
     margin-right: 5px;
     color: white;
-    padding: 15px;
+    padding: 10px;
 }
 .btn-cart p{
     margin-right: 5px;
 }
 .btn-cart:hover{
-    background-color: #635f75;
+    background-color: #54ec18;
+}
+
+.btn-cart2{
+    background-color: #a8231e;
+    border-radius:8px;
+    border: none;
+    margin-right: 5px;
+    color: white;
+    padding: 10px;
+}
+.btn-cart2 p{
+    margin-right: 5px;
+}
+.btn-cart2:hover{
+    background-color: #f00f0f;
 }
 .cart{
     position: sticky;
     top: 0;
-    padding: 30px 25px;
+}
+.cart button{
+    margin: 5px;
 }

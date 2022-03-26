@@ -2,10 +2,11 @@ import React from 'react';
 import './Person.css'
 
 const Person = (props) => {
-    const { name } = props.person;
+    const { name, img } = props.person;
     return (
-        <div>
-            <h5>{name}</h5>
+        <div className='cart-items'>
+            <img className='image' src={img} alt="" height={50} width={50} /><span className='name'>{name}</span>
+
         </div>
     );
 };

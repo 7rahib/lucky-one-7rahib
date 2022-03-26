@@ -20,14 +20,21 @@ const Shop = () => {
         const newCart = [...cart, product]
         setCart(newCart);
         const name = [...persons, product];
-        setPerson(name);
+        if (name.length <= 4) {
+            setPerson(name);
+        }
+        else {
+            alert("Can't choose more than 4")
+        }
+
     }
-    const handleChooseAgain = (persons) => {
+    const handleChooseAgain = () => {
         setPerson([])
+        setCart([])
     }
     const handleChooseOne = (persons) => {
-        const lenght = persons.lenght
-        console.log(lenght)
+        const length = persons.length
+        console.log(length)
     }
 
     return (
@@ -59,7 +66,7 @@ const Shop = () => {
                             <button onClick={handleChooseOne} className='btn-cart'>Choose 1 for me</button>
                         </div>
                         <div>
-                            <button onClick={handleChooseAgain} className='btn-cart'>Choose Again</button>
+                            <button onClick={handleChooseAgain} className='btn-cart2'>Choose Again</button>
                         </div>
                     </div>
                 </div>
