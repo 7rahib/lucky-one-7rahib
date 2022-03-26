@@ -3,6 +3,7 @@ import './Question.css'
 const Question = () => {
     return (
         <div className='questions'>
+            <hr />
             <div className='qaheader'>
                 <h2>Questions and Answers</h2>
             </div>
@@ -12,7 +13,7 @@ const Question = () => {
                 <div>
                     <h3>How React Works ?</h3>
                     <h4>Props</h4>
-                    <p>React is a JavaScript library for creating logical and efficient user interfaces (UIs). Components which are how we show information are created using JSX. Components are reusable user interfaces that allow you to divide an app into discrete parts that work independently of one another. To construct a functioning and dynamic UI, components may communicate with each other via props and state. React keeps a copy of the DOM using JavaScript's virtual DOM, and it utilizes a diff algorithm to compare it to any changes before applying it to the real DOM. React's lightweight version of the Real DOM is the Virtual DOM. Real DOM manipulation takes much longer than virtual DOM manipulation. When the state of an object changes, Virtual DOM just updates that object in the real DOM, not all of them.</p>
+                    <p>React is a JavaScript library for creating logical and efficient user interfaces (UIs). Components which are how we show information are created using JSX. Components are reusable user interfaces that allow you to divide an app into discrete parts that work independently of one another. To construct a functioning and dynamic UI, components may communicate with each other via props and state. React keeps a copy of the DOM using JavaScript's virtual DOM, and it utilizes a diff algorithm to compare it to any changes before applying it to the real DOM. React's lightweight version of the Real DOM is the Virtual DOM. Real DOM manipulation takes much longer than virtual DOM manipulation. When the state of an object changes, Virtual DOM just updates that object in the real DOM, not all of them.</p>
                 </div>
             </div>
             <hr />
