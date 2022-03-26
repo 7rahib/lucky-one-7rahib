@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
+import Chosen from '../Chosen/Chosen';
 import Person from '../Person/Person';
 import Product from '../Product/Product';
 import './Shop.css'
@@ -9,7 +10,9 @@ const Shop = () => {
     const [products, setProducts] = useState([])
     const [cart, setCart] = useState([]);
     const [persons, setPerson] = useState([]);
-
+    const [length, setLength] = useState([]);
+    const [currentItem, setCurrentItem] = useState([]);
+    const [currentRandom, setCurrentRandom] = useState([]);
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
@@ -26,16 +29,29 @@ const Shop = () => {
         else {
             alert("Can't choose more than 4")
         }
+        setLength(name.length)
+
+    }
+    const handleChooseOne = () => {
+
+        const random = Math.floor(Math.random() * length);
+
+        if (currentRandom !== random) {
+            const item = persons[random];
+            setCurrentRandom(random);
+            setCurrentItem(item);
+        }
+        else {
+            handleChooseOne();
+        }
 
     }
     const handleChooseAgain = () => {
         setPerson([])
         setCart([])
+        setCurrentItem([])
     }
-    const handleChooseOne = (persons) => {
-        const length = persons.length
-        console.log(length)
-    }
+
 
     return (
         <div className='shop-container'>
@@ -67,6 +83,10 @@ const Shop = () => {
                         </div>
                         <div>
                             <button onClick={handleChooseAgain} className='btn-cart2'>Choose Again</button>
+                        </div>
+                        <div>
+
+                            <Chosen currentItem={currentItem}></Chosen>
                         </div>
                     </div>
                 </div>

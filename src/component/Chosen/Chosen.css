@@ -1,0 +1,13 @@
+.cart-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+}
+.name{
+    font-size: 15px;
+    margin-left: 5px;
+}
+.image{
+    border-radius: 50%;
+}
